@@ -9,6 +9,7 @@ before(:all) do
 end
 
   it 'all key values of name should be of data type string' do
-    expect(@beers_tests['name']).to be_a_kind_of(String)
+    puts @beer_tests["name"].class
+    # expect(@beers_tests['name']).to be_a_kind_of(String)
   end
 end
