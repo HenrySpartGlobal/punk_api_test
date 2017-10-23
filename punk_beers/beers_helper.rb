@@ -37,7 +37,7 @@
         query_response[0]
         end
         else
-          reponse = JSON.parse(self.class.get("/beers").body)
+          response = JSON.parse(self.class.get("/beers").body)
           response[0]
         #from line 28, if the line is not empty append the ?, for each one print the key and value and append it into the string
         #then while the number of keys is less than than the keys(length), minus one, means we get rid of one & sign. For each key minus one

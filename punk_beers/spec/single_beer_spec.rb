@@ -2,11 +2,13 @@ require 'spec_helper'
 
 describe 'test beers' do
 
-before(:each) do
+before(:all) do
   service = PunkBeerService.new
-  @beers_tests = service.all_beers('beers')
+  @beers_tests = service.all_beers({"yeast" => "american", "abv_gt" => 4})
+
 end
 
-  it 'all key quality values should be between 1-8' do
+  it 'all key values of name should be of data type string' do
+    expect(@beers_tests['name']).to be_a_kind_of(String)
   end
 end
