@@ -10,7 +10,3 @@ end
   it 'all key quality values should be between 1-8' do
   end
 end
-
-single_beers_call = PunkBeerService.new
-
-puts single_beers_call('1')
