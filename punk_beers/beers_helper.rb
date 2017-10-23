@@ -6,14 +6,15 @@ class PunkBeerService
 
   base_uri 'https://api.punkapi.com/v2/' #adds this to the front of the URL
 
-  def single_beer_call(beer)
-    JSON.parse(self.class.get("/beers/#{number}").body) #need to pares so ruby and handle JS, and we will get a Hash back. This part appends to line 7.
+  def single_beer_call(id)
+    JSON.parse(self.class.get("/beers/#{id}").body) #need to pares so ruby and handle JS, and we will get a Hash back. This part appends to line 7.
   end
 
-  def multiple_beer_service(beers_array)
-    JSON.parse(self.class.post("/beers", body: {"beers" => beers_array }).body)
+  def random_beers_call
+    JSON.parse(self.class.get("/beers/random").body)
   end
 end
 
 
-#parese postcode, and brings back the post codes
+single = PunkBeerService.new
+puts single.single_beer_call('1')
