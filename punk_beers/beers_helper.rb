@@ -62,7 +62,7 @@ end
 #
 # beers = PunkBeerService.new
 # puts beers.all_beers
- kc = PunkBeerService.new
- kc.all_beers({"yeast" => "american", "abv_gt" => 4})
-
- p kc.uri
+ # kc = PunkBeerService.new
+ # kc.all_beers({"yeast" => "american", "abv_gt" => 4})
+ #
+ # p kc.uri
