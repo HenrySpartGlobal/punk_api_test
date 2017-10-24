@@ -9,10 +9,10 @@ def initialize
     @uri = ""
 end
 
-base_uri 'https://api.punkapi.com/v2/' #adds this to the front of the URL
+base_uri 'https://api.punkapi.com/v2/'
 
 def single_beer_call(id)
-  single_beer_call = JSON.parse(self.class.get("/beers/#{id}").body) #need to pares so ruby and handle JS, and we will get a Hash back. This part appends to line 7.
+  single_beer_call = JSON.parse(self.class.get("/beers/#{id}").body) 
   single_beer_call[0]
 end
 
