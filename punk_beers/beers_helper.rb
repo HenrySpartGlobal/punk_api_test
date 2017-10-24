@@ -1,5 +1,5 @@
-require 'httparty'
-require 'json'
+  require 'httparty'
+  require 'json'
 
 class PunkBeerService
   include HTTParty
