@@ -9,7 +9,7 @@ class PunkBeerService
       @uri = ""
   end
 
-base_uri 'https://api.punkapi.com/v2/'
+  base_uri 'https://api.punkapi.com/v2/'
 
   def single_beer_call(id)
     single_beer_call = JSON.parse(self.class.get("/beers/#{id}").body)
